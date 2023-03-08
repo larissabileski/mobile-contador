@@ -9,8 +9,14 @@ export default class Counter extends Component {
     incrementar(){
         this.setState({ count: this.state.count + this.state.step});
     }
-    decrementar(){
-        this.setState({ count: this.state.count - 1});
+    decrementar() {
+        this.setState({ count: this.state.count - 1 });
+    }
+    alteraStep(e) {
+        this.setState({ step: parseInt(e.nativeEvent.text) })
+    }
+    alteraStep2(text) {
+        this.setState({ step: parseInt(text) })
     }
     alteraStep(text){
         this.setState({ step: parseInt(text)});
@@ -36,4 +42,5 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alingItems: 'center',
     },
+   
 });
